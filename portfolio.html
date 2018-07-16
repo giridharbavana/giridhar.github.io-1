@@ -10,258 +10,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-   
-<style>
-  @font-face{
-    font-family: AvertaBlack; src: url('./AvertaBlack');
-    font-family: AvertaLight; src: url('./AvertaLight');
-    font-family: Averta; src: url('./Averta');
-
-  }
-body{
-  height:2000px;
-  background: #E9ECEF;
-}
-.footer{
-   text-align: center;
-   margin-top: 12px;
-   margin-bottom: 12px;
-
-}
-#footerImg{
-  background: url('./footer_end.png');
-  width: 100%;
-  height: 300px;
-  background-repeat: no-repeat;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  background-position: bottom;
-
-}
-#resume{
-  height:300px ;
-  background: url('./circles.png');
-  background-size: contain;
-  background-position: center
-}
-.nav-name{
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  margin-left: 560px;
-  margin-right: 1000px;
-}
-.download-resume-btn{
-  border-radius: 100px;margin-left: 20%;
-}
-@media screen and (max-width: 600px) {
-  div img.img-block{
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-a img.viewbtn{
-  margin-top: 30px; 
-  margin-left: 10px;
-   }
-  .download-resume-btn{
-  border-radius: 100px;margin-left: 18%;margin-top: 10px;margin-bottom: -20px;
-}
-  #resume{
-  height:200px ;
-  background: url('./circles.png');
-  background-size: contain;
-  background-position: center
-}
-  .home{
-    padding-top: 180px;
-  margin-bottom: 0px;
-  margin-right: -20px;
-  /* background: url('./landing'); */
-  background-image: url('./landing.jpg');
-  background-size: initial;
-  background-repeat: no-repeat;
-  }
-  .nav-name{
-    margin-left: 0px;
-  }
-
-}
-
-.nav-other{
-  color: white;
-  margin-right: 20px;
-
-
-}
-
-
-.dummyImg{
-  background: linear-gradient(to right,  #6C48A9 0%,#FF287A 100%);
-  }
-.description{
-  word-spacing: 0.3em;
-  letter-spacing: 0.2em;
-  line-height: 2em;
-}
-.see-more{
-  color: black;
-  align-self: center;
-  margin-left: 10px;
-}
-a:hover{
-  text-decoration: none;
-}
-.viewbtn{
-
-   margin-top: 30px; 
-   margin-left: 40%
-}
-.each-layout{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  /* padding-top: 10px;
-  padding-left: 50px; */
-
-}
-.social-icon{
-  width: 30px;
-  height: 30px;
-  margin-right: 15px;
-}
-.headings{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 45px;
-}
-.social-icons-panel{
-  display:flex;
-   flex-direction: row;
-   margin-top: 80px;
-   margin-top: 150px;
-}
-.home{
-  padding-top: 180px;
-  padding-left: 50px;
-  margin-bottom: 0px;
-  /* background: url('./landing'); */
-  background-image: url('./landing.jpg');
-  background-size: 100% 105%;
-  background-repeat: no-repeat;
-}
- .email{
-  letter-spacing: 0.2em;
-  font-size: 20px;
- }
-.aftername{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 0.3em;
-  font-size: 30px;
-}
-.navbar{
-  padding: 0px 0px 0px 10px;
-  display: flex;
-  background: linear-gradient(to right,  #6C48A9 0%,#FF287A 100%);
-}
-
- .active-keep {
-   border-bottom: 2px solid white;
-  transition: all 0.3s ease;
-  
-}
-
-/* .nav-towards {
-  
-    -webkit-animation: front 2s ; /* Safari 4.0 - 8.0 
-    -webkit-animation-fill-mode: forwards;
-
-    animation: front 2s ;
-    animation-fill-mode:forwards;
-}
-.nav-backwards {
-  
-  -webkit-animation: back 2s ; /* Safari 4.0 - 8.0 
-  -webkit-animation-fill-mode: forwards;
-
-  animation: back 2s ;
-  animation-fill-mode:forwards;
-}
-/* Safari 4.0 - 8.0 
-@-webkit-keyframes front {
-  0%   { opacity: 0.3;}
-    100% { opacity: 1;}
-}
-
-@keyframes front {
-    0%   { opacity: 0.3;}
-    100% { opacity: 1;}
-}
-/* Safari 4.0 - 8.0 
-@-webkit-keyframes back {
-  100%   { opacity: 1;}
-    0% { opacity: 0.3;}
-}
-
-@keyframes back {
-  100%   { opacity: 1;}
-    0% {opacity: 0.3;}
-} */
-
-    </style>
+  <script src="./scripts.js"></script>
+  <link rel="stylesheet" href="styles.css">
       
     </head>
     <body>
-         <script>
 
-$(document).ready(function(){
-  if($(window).scrollTop() === 0){
-  $("nav").css("opacity","0.3");
-  }
-  else{
-    $("nav").css("opacity","1");
-    $(".nav-name").css("margin-left","0");
-    
-  }
-
-  $(window).scroll(function(){
-  	var scroll = $(window).scrollTop();
-    if(scroll<560){
-      $(".nav-name").css("margin-left",560-scroll);
-      $("nav").css("opacity",0.3+0.001*scroll);
-
-
-    }
-	  else if (scroll > 560) {
-      $("nav").css("opacity",1);
-
-	  }
-    $('#nav-resume').toggleClass('active-keep',
-     //add 'ok' class when div position match or exceeds else remove the 'ok' class.
-      scroll >= $('#resume').offset().top-60,
-
-    );
-    if($(this).scrollTop()>=$('#resume').position().top-60){
-        $("#nav-work").removeClass("active-keep");
-    }
-    if($(this).scrollTop()>=$('#start').position().top-60 && $(this).scrollTop()<=$('#resume').position().top-60){
-        $("#nav-work").addClass("active-keep");
-    }
-
-  
-
-  });
-    $(".navbar a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function(){
-
-          window.location.hash = hash;
-      });
-    } 
-    });
-})
-         </script>
 <nav class="navbar fixed-top navbar-expand-sm bg-light">
   
     <a class="nav-link " href="#start"><b class="nav-name">GIRIDHAR</b> <span class="sr-only">(current)</span></a>
@@ -278,15 +32,15 @@ $(document).ready(function(){
     </div>
   </nav>
   <div id="start" class="jumbotron home">
-      <h1 class="display-3" style="color: white; margin-top: -20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"><b>Hi, I'm GIRIDHAR.</b></h1>
-      <p class="aftername" style="color: white">and I'm a UX/Graphic Designer</p>
+      <h1 class="display-3" style="color: white; margin-top: -20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; "><b>Hi, I'm GIRIDHAR</b></h1>
+      <p class="aftername" style="color: white"><i>and I'm a UX/Graphic Designer</i></p>
       <br>
-      <p class="email" style="color: white">Get in touch with me - Email.</p>
-      <hr class="my-4" style="background: white">
+      <p class="email" style="color: white">Get in touch with me - <i>giridharbavana@gmail.com</i></p>
       <div class="social-icons-panel">
         <a href="#"><img class="social-icon" src="./dribbblehome.png"/></a>      
         <a href="#"><img class="social-icon" src="./instahome.png"/></a>      
         <a href="#"><img class="social-icon" src="./linkedinhome.png"/></a>      
+        <a href="#"><img class="arrow" src="arrow.png"></a>
 
       </div>
     </div>
@@ -303,16 +57,16 @@ $(document).ready(function(){
       </p>
       <br>
       <div class="row">
-        <img class="col-sm-12 col-md-6 img-block" src="./giridharback.jpg" style="height: 325px;">
+        <img class="col-sm-12 col-md-6 img-block" src="./pixcy/picxy.gif" style="height: 335px;">
           <div class="col-sm-6 col-md-6">
             <div class="row">
-                <img class="col-sm-12 col-md-6 img-block" src="./giridharback.jpg" style="height: 150px;">
-                <img class="col-sm-12 col-md-6 img-block" src="./giridharback.jpg" style="height: 150px;">
+                <img class="col-sm-12 col-md-6 img-block " src="./pixcy/login.png" style="height: 160px;">
+                <img class="col-sm-12 col-md-6 img-block " src="./pixcy/100.png" style="height: 160px;">
             </div>
             <br>
             <div class="row">
-                <img class="col-sm-12 col-md-6 img-block" src="./giridharback.jpg" style="height: 150px;">
-                <img class="col-sm-12 col-md-6 img-block" src="./giridharback.jpg" style="height: 150px;">
+                <img class="col-sm-12 col-md-6 img-block " src="./pixcy/city.png" style="height: 160px;">
+                <img class="col-sm-12 col-md-6 img-block " src="./pixcy/dashboard.png" style="height: 160px;">
             </div>
 
 
@@ -332,18 +86,34 @@ $(document).ready(function(){
           quotes over whatsapp and other platforms.
         </p>
         <br>
-        <div class="row">
-          <img class="col-sm-12 col-md-6 img-block" src="./giridharback.jpg" style="height: 325px;">
-          <div class="col-sm-12 col-md-3">
-              <img class="col-sm-12 col-md-12 img-block" src="./giridharback.jpg" style="height: 150px; margin-bottom: 25px;">
+        <!-- <div class="row">
+          <img class="col-sm-12 col-sx-12 col-md-6 img-block" src="./giridharback.jpg" style="height: 325px;">
+          <div class="col-sm-12 col-sx-12 col-md-3 responsiveImgDivs">
+              <img class="col-sm-12  col-sx-12 col-md-12 img-block" src="./giridharback.jpg" style="height: 150px; margin-bottom: 25px;">
               
-              <img class="col-sm-12 col-md-12 img-block" src="./giridharback.jpg" style="height: 150px;">
+              <img class="col-sm-12  col-sx-12 col-md-12 img-block" src="./giridharback.jpg" style="height: 150px;">
 
           </div>
-            <img class="col-sm-12 col-md-3 img-block" src="./giridharback.jpg" style="height: 325px;">
+            <img class="col-sm-12 col-sx-12 col-md-3 img-block" src="./giridharback.jpg" style="height: 325px;">
 
            
-          </div>
+          </div> -->
+          <div class="row">
+            <img class="col-sm-12 col-md-6 img-block" src="./giridharback.jpg" style="height: 335px;">
+              <div class="col-sm-6 col-md-6">
+                <div class="row">
+                    <img class="col-sm-12 col-md-6 img-block " src="./blue/f1.png" style="height: 160px;">
+                    <img class="col-sm-12 col-md-6 img-block " src="./blue/f2.png" style="height: 160px;">
+                </div>
+                <br>
+                <div class="row">
+                    <img class="col-sm-12 col-md-6 img-block " src="./blue/f3.jpg" style="height: 160px;">
+                    <img class="col-sm-12 col-md-6 img-block " src="./blue/f4.png" style="height: 160px;">
+                </div>
+    
+    
+             </div>
+            </div>
           <a href="#"><img class="viewbtn" src="./button2.png"  ></a>
         </div>
 
@@ -361,24 +131,24 @@ $(document).ready(function(){
       <div class="row">
           <span class="col-sm-12 col-md-0.5"></span>
 
-        <img class="col-sm-12 col-md-3 img-block" src="./giridharback" style="height: 150px;">
+        <img class="col-sm-12 col-md-3 img-block" src="./100/d1.jpg" style="height: 150px;">
         <span class="col-sm-12 col-md-1"></span>
-        <img class="col-sm-12 col-md-3 img-block" src="./giridharback" style="height: 150px;">
+        <img class="col-sm-12 col-md-3 img-block" src="./100/d2.jpg" style="height: 150px;">
         <span class="col-sm-12 col-md-1"></span>
 
-        <img class="col-sm-12 col-md-3 img-block" src="./giridharback" style="height: 150px;">
+        <img class="col-sm-12 col-md-3 img-block" src="./100/d3.jpg" style="height: 150px;">
         <span class="col-sm-12 col-md-0.5"></span>
 
       </div>
       <div class="row" style="margin-top: 25px">
           <span class="col-sm-12 col-md-0.5"></span>
 
-          <img class="col-sm-12 col-md-3 img-block" src="./giridharback" style="height: 150px;">
+          <img class="col-sm-12 col-md-3 img-block" src="./100/d4.jpg" style="height: 150px;">
           <span class="col-sm-12 col-md-1"></span>
-          <img class="col-sm-12 col-md-3 img-block" src="./giridharback" style="height: 150px;">
+          <img class="col-sm-12 col-md-3 img-block" src="./100/d5.jpg" style="height: 150px;">
           <span class="col-sm-12 col-md-1"></span>
   
-          <img class="col-sm-12 col-md-3 img-block" src="./giridharback" style="height: 150px;">
+          <img class="col-sm-12 col-md-3 img-block" src="./100/d6.jpg" style="height: 150px;">
           <span class="col-sm-12 col-md-0.5"></span>
   
         </div>
@@ -387,7 +157,7 @@ $(document).ready(function(){
 
 
       
-    <div class="jumbotron each-layout container">
+    <!-- <div class="jumbotron each-layout container">
         <div style="display:flex;flex-direction: row;">
 
         <p class="headings">Bootstrap Elements</p>
@@ -399,12 +169,12 @@ $(document).ready(function(){
       <br>
       <div class="row">
         <img class="col-sm-12 col-md-6 img-block" src="./giridharback.jpg" style="height: 325px;">
-        <!-- <span class="col-sm-12 col-md-1"></span>  -->
+        <!-- <span class="col-sm-12 col-md-1"></span>  
         <img class="col-sm-12 col-md-6 img-block " src="./giridharback.jpg" style="height: 325px;">
 
 
         </div>
-      </div>
+      </div> -->
 
 
       <div class="jumbotron each-layout container">
@@ -419,11 +189,11 @@ $(document).ready(function(){
         <br>
         <div class="row" style="margin-top: 20px">
     
-            <img class="col-sm-12 col-md-4 img-block" src="./giridharback" style="height: 240px;">
+            <img class="col-sm-12 col-md-4 img-block" src="./illustrations/i1.png" style="height: 240px;">
 
-            <img class="col-sm-12 col-md-4 img-block" src="./giridharback" style="height: 240px;">
+            <img class="col-sm-12 col-md-4 img-block" src="./illustrations/i2.png" style="height: 240px;">
 
-            <img class="col-sm-12 col-md-4 img-block" src="./giridharback" style="height: 240px;">
+            <img class="col-sm-12 col-md-4 img-block" src="./illustrations/i3.png" style="height: 240px;">
     
           </div>
         </div>
@@ -440,11 +210,11 @@ $(document).ready(function(){
           <br>
           <div class="row" style="margin-top: 20px">
     
-              <img class="col-sm-12 col-md-4 img-block" src="./giridharback" style="height: 240px;">
+              <img class="col-sm-12 col-md-4 img-block" src="./interactions/int1.gif" style="height: 240px;">
   
-              <img class="col-sm-12 col-md-4 img-block" src="./giridharback" style="height: 240px;">
+              <img class="col-sm-12 col-md-4 img-block" src="./interactions/int2.gif" style="height: 240px;">
   
-              <img class="col-sm-12 col-md-4 img-block" src="./giridharback" style="height: 240px;">
+              <img class="col-sm-12 col-md-4 img-block" src="./interactions/int3.gif" style="height: 240px;">
       
             </div>
           </div>
@@ -461,11 +231,11 @@ $(document).ready(function(){
             <br>
             <div  class="row" style="margin-top: 20px">
       
-                <img class="col-sm-12 col-md-4 img-block" src="./giridharback" style="height: 240px;">
+                <img class="col-sm-12 col-md-4 img-block" src="./animations/anim1.gif" style="height: 240px;">
     
-                <img class="col-sm-12 col-md-4 img-block" src="./giridharback" style="height: 240px;">
+                <img class="col-sm-12 col-md-4 img-block" src="./animations/anim2.gif" style="height: 240px;">
     
-                <img class="col-sm-12 col-md-4 img-block" src="./giridharback" style="height: 240px;">
+                <img class="col-sm-12 col-md-4 img-block" src="./animations/anim3.gif" style="height: 240px;">
         
               </div>
             </div>
@@ -475,7 +245,7 @@ $(document).ready(function(){
             <div class="row">
                 <a  href="#"><img class="col-8 col-md-12 download-resume-btn" src="./download_resume.png" ></a>
                 <a href="#home" class="col-sm-12 col-md-12 footer" style="margin-top: 50px;margin-bottom: 25px; color: black" ><span>GO TO TOP</span></a>
-                <p class="col-sm-12 col-md-12 footer">For any suggestions or enquires, reach out to Email</p>
+                <p class="col-sm-12 col-md-12 footer">For any suggestions or enquires, reach out to <i>giridharbavana@gmail.com</i></p>
                 <div class="col-sm-12 col-md-12 footer">
                     <a href="#"><img class="social-icon" src="./dribbblefooter.png"/></a>      
                     <a href="#"><img class="social-icon" src="./instafooter.png"/></a>      
